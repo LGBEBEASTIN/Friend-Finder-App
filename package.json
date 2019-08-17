@@ -1,0 +1,24 @@
+{
+  "name": "Friend-Finder-App",
+  "version": "1.0.0",
+  "description": "This is a web application built using front-end and back-end JavaScript.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LGBEBEASTIN/Friend-Finder-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LGBEBEASTIN/Friend-Finder-App/issues"
+  },
+  "homepage": "https://github.com/LGBEBEASTIN/Friend-Finder-App#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
