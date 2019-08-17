@@ -8,7 +8,7 @@ module.exports = function(app) {
 
     app.post("/api/friends", function(req, res) {
 
-    let difference = 0;
+    let totalDiff = 0;
     let match = {
         name = "",
         photo = "",
@@ -36,6 +36,37 @@ module.exports = function(app) {
 
     console.log("Total User Score: " + total);
     console.log("Best Match Difference: " + match.friendDifference);
+
+    for (let i = 0; i < friends.length; i++){
+
+        console.log("Pirate " + friend[i].name);
+        totalDiff = 0;
+        console.log("Total Difference: " + totalDiff);
+        console.log("Best Match Differnce: " + match.friendDifference);
+
+        let bfScore = friends[i].scores.reduce((a,b) => a + b, 0);
+        console.log("Total Friend Score: " + bfScore)
+
+        let sumDifference = Math.abs(total-bfScore);
+
+        totalDiff += sumDifference;
+
+        console.log("----------");
+        console.log(totalDiff);
+        console.log("----------");
+
+        if (totalDiff <= match.friendDifference){
+            match.name = friends[i].name;
+            match.photo = friends[i].photo;
+            match.friendDifference = totalDiff;
+        }
+        console.log("Total Difference: " + totalDiff);
+    }
+
+    console.log(match);
+    friends.push(userData);
+    console.log(userData);
+    res.json(match);
 
     });
   };
