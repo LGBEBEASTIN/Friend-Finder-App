@@ -39,7 +39,7 @@ module.exports = function(app) {
 
     for (let i = 0; i < friends.length; i++){
 
-        console.log("Pirate " + friend[i].name);
+        console.log("Pirate " + friends[i].name);
         totalDiff = 0;
         console.log("Total Difference: " + totalDiff);
         console.log("Best Match Differnce: " + match.friendDifference);

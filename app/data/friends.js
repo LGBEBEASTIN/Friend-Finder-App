@@ -1,7 +1,7 @@
 let friends = [
     {
         name: "Monkey D. Luffy",
-        photo: "https://onepiece.fandom.com/wiki/Monkey_D._Luffy",
+        photo: "https://onepiece.fandom.com/wiki/Monkey_D._Luffy?file=Monkey_D._Luffy_Anime_Post_Timeskip_Infobox.png",
         scores: [5,4,2,1,5,1,1,5,5,5]
     },
     {

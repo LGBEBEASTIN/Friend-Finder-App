@@ -146,15 +146,15 @@
                 </div>
             </div>
         </div>
-        <div id="bestFriendModal" class="modal" role="dialog">
+        <div id="pirateModal" class="modal" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h3 class="modal-title">Best Pirate:</h1>
                     </div>
                     <div class="modal-body">
-                        <h2 id="bestFriend"></h2>
-                        <img id="bestFriendPhoto" src="#">
+                        <h2 id="pirateName"></h2>
+                        <img id="piratePic" src="#">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-dark" data-dismiss="modal">EXIT</button>
@@ -165,56 +165,43 @@
 
     </main>
 
-
     <script type="text/javascript">
+
         $("#submit").on("click", function () {
             event.preventDefault();
 
+            if (($('#name').val() !== "") && ($('#photo').val() !== "")) {
 
-            let Valid = true;
-            if ($("#name").val() === "" ||
-                $("#photo").val() === "") {
-                valid = false;
-            }
-
-            else if ($("#question1").val() === "" ||
-                $("#question2").val() === "" ||
-                $("#question3").val() === "" ||
-                $("#question4").val() === "" ||
-                $("#question5").val() === "" ||
-                $("#question6").val() === "" ||
-                $("#question7").val() === "" ||
-                $("#question8").val() === "" ||
-                $("#question9").val() === "" ||
-                $("#question10").val() === "") {
-                Valid = false;
-            }
-
-            if (Valid == true) {
                 let userData = {
                     name: $("#name").val(),
                     photo: $("#photo").val(),
-                    scores: [
-                        $("#q1").val(), $("#q2").val(),
-                        $("#q3").val(), $("#q4").val(),
-                        $("#q5").val(), $("#q6").val(),
-                        $("#q7").val(), $("#q8").val(),
-                        $("#q9").val(), $("#q10").val()
-                    ]
-                };
+                    scores: [$("#q1").val(), $("#q2").val(),
+                    $("#q3").val(), $("#q4").val(),
+                    $("#q5").val(), $("#q6").val(),
+                    $("#q7").val(), $("#q8").val(),
+                    $("#q9").val(), $("#q10").val(),]
+                }
+
                 let currentURL = window.location.origin;
+
                 $.post(currentURL + "/friends", userData, function (data) {
-                    $("#matchName").text(data.name);
-                    $("#matchImg").attr("src", data.photo);
-                    $("#resultsModal").modal("toggle");
+
+                    $("#pirateName").text(data.name);
+                    $('#pirateImg').attr("src", data.photo);
+                    $("#pirateModal").modal('toggle');
+                    $("#name").val("");
+                    $("#photo").val("");
                 });
             }
+
             else {
-                alert("Please complete the form.");
+                alert("Make sure all of your information is filled in.");
             }
             return false;
         });
     </script>
+
+
 </body>
 
 </html>
