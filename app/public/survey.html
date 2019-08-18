@@ -8,6 +8,14 @@
     <title>One Piece Friend Finder</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -23,13 +31,12 @@
                         <h4>Name: </h4>
                         <input type="text" id="name" class="form-control" required="">
 
-                        <h4>Link to Photo: </h4>
+                        <h4>Photo:</h4>
                         <input type="text" id="photo" class="form-control" required="">
                     </form>
 
                     <form>
-                        <h3><strong>Question 1</strong></h3>
-                        <h4>How much do you like pirates?</h4>
+                        <h3>1: How much do you like pirates?</h3>
                         <select class="chosen-select" id="q1">
                             <option value=""></option>
                             <option value="1">1 (NOT MUCH)</option>
@@ -39,8 +46,7 @@
                             <option value="5">5 (VERY MUCH)</option>
                         </select>
 
-                        <h3><strong>Question 2</strong></h3>
-                        <h4>How much do you like pistols?</h4>
+                        <h3>2: How much do you like pistols?</h3>
                         <select class="chosen-select" id="q2">
                             <option value=""></option>
                             <option value="1">1 (NOT MUCH)</option>
@@ -50,9 +56,7 @@
                             <option value="5">5 (VERY MUCH)</option>
                         </select>
 
-
-                        <h3><strong>Question 3</strong></h3>
-                        <h4>How much do you like swords?</h4>
+                        <h3>3: How much do you like swords?</h3>
                         <select class="chosen-select" id="q3">
                             <option value=""></option>
                             <option value="1">1 (NOT MUCH)</option>
@@ -62,9 +66,7 @@
                             <option value="5">5 (VERY MUCH)</option>
                         </select>
 
-
-                        <h3><strong>Question 4</strong></h3>
-                        <h4>How much do you like kickboxing?</h4>
+                        <h3>4: How much do you like kickboxing?</h3>
                         <select class="chosen-select" id="q4">
                             <option value=""></option>
                             <option value="1">1 (NOT MUCH)</option>
@@ -74,9 +76,7 @@
                             <option value="5">5 (VERY MUCH)</option>
                         </select>
 
-
-                        <h3><strong>Question 5</strong></h3>
-                        <h4>How much do you like to eat?</h4>
+                        <h3>5: How much do you like to eat?</h3>
                         <select class="chosen-select" id="q5">
                             <option value=""></option>
                             <option value="1">1 (NOT MUCH)</option>
@@ -86,9 +86,7 @@
                             <option value="5">5 (VERY MUCH)</option>
                         </select>
 
-
-                        <h3><strong>Question 6</strong></h3>
-                        <h4>How much do you like alcohol?</h4>
+                        <h3>6: How much do you like alcohol?</h3>
                         <select class="chosen-select" id="q6">
                             <option value=""></option>
                             <option value="1">1 (NOT MUCH)</option>
@@ -98,9 +96,7 @@
                             <option value="5">5 (VERY MUCH)</option>
                         </select>
 
-
-                        <h3><strong>Question 7</strong></h3>
-                        <h4>How much do you like cooking?</h4>
+                        <h3>7: How much do you like cooking?</h3>
                         <select class="chosen-select" id="q7">
                             <option value=""></option>
                             <option value="1">1 (NOT MUCH)</option>
@@ -110,8 +106,7 @@
                             <option value="5">5 (VERY MUCH)</option>
                         </select>
 
-                        <h3><strong>Question 8</strong></h3>
-                        <h4>How loyal are you?</h4>
+                        <h3>8: How loyal are you?</h3>
                         <select class="chosen-select" id="q8">
                             <option value=""></option>
                             <option value="1">1 (NOT MUCH)</option>
@@ -121,8 +116,7 @@
                             <option value="5">5 (VERY MUCH)</option>
                         </select>
 
-                        <h3><strong>Question 9</strong></h3>
-                        <h4>How defiant are you?</h4>
+                        <h3>9: How defiant are you?</h3>
                         <select class="chosen-select" id="q9">
                             <option value=""></option>
                             <option value="1">1 (NOT MUCH)</option>
@@ -132,8 +126,7 @@
                             <option value="5">5 (VERY MUCH)</option>
                         </select>
 
-                        <h3><strong>Question 10</strong></h3>
-                        <h4>How reckless are you?</h4>
+                        <h3>10: How reckless are you?</h3>
                         <select class="chosen-select" id="q10">
                             <option value=""></option>
                             <option value="1">1 (NOT MUCH)</option>
@@ -152,7 +145,76 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div id="bestFriendModal" class="modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Best Pirate:</h1>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="bestFriend"></h2>
+                        <img id="bestFriendPhoto" src="#">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">EXIT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
+
+
+    <script type="text/javascript">
+        $("#submit").on("click", function () {
+            event.preventDefault();
+
+
+            let Valid = true;
+            if ($("#name").val() === "" ||
+                $("#photo").val() === "") {
+                valid = false;
+            }
+
+            else if ($("#question1").val() === "" ||
+                $("#question2").val() === "" ||
+                $("#question3").val() === "" ||
+                $("#question4").val() === "" ||
+                $("#question5").val() === "" ||
+                $("#question6").val() === "" ||
+                $("#question7").val() === "" ||
+                $("#question8").val() === "" ||
+                $("#question9").val() === "" ||
+                $("#question10").val() === "") {
+                Valid = false;
+            }
+
+            if (Valid == true) {
+                let userData = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#q1").val(), $("#q2").val(),
+                        $("#q3").val(), $("#q4").val(),
+                        $("#q5").val(), $("#q6").val(),
+                        $("#q7").val(), $("#q8").val(),
+                        $("#q9").val(), $("#q10").val()
+                    ]
+                };
+                let currentURL = window.location.origin;
+                $.post(currentURL + "/friends", userData, function (data) {
+                    $("#matchName").text(data.name);
+                    $("#matchImg").attr("src", data.photo);
+                    $("#resultsModal").modal("toggle");
+                });
+            }
+            else {
+                alert("Please complete the form.");
+            }
+            return false;
+        });
+    </script>
 </body>
 
 </html>
