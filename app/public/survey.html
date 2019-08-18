@@ -8,6 +8,7 @@
     <title>One Piece Friend Finder</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../public/style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -154,7 +155,7 @@
                     </div>
                     <div class="modal-body">
                         <h2 id="pirateName"></h2>
-                        <img id="piratePic" src="#">
+                        <img id="piratePic" src="">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-dark" data-dismiss="modal">EXIT</button>
@@ -187,7 +188,7 @@
                 $.post(currentURL + "/friends", userData, function (data) {
 
                     $("#pirateName").text(data.name);
-                    $('#pirateImg').attr("src", data.photo);
+                    $('#piratePic').attr("src", data.photo);
                     $("#pirateModal").modal('toggle');
                     $("#name").val("");
                     $("#photo").val("");
